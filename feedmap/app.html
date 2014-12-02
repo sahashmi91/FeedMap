@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>FeedMap App</title>
+	<style type="text/css">
+		body {
+			font-family: "Proxima Nova", Sans-serif;
+			font-size: 1.3rem;
+		}
+		html, body, #map-canvas { height: 90vh; margin: 0; padding: 0;}
+		.gmnoprint {
+			display: none;}
+		#expand {
+			border-radius: 0;
+			font-size: 2rem;
+			padding: 1rem;
+			height: 10vh;
+			width: 100%;
+		}
+		.tweet {
+			color: #fff;
+			margin: 2rem;
+			font-size: 1.5rem;
+		}
+		.uk-notify-message {
+			background: #fff !important;
+			color: #3A9BFC !important;
+			border: 0 !important;
+		}
+		#search, .overlay {
+			font-size: 7vh;
+			background: transparent;
+			color: #fff;
+			border: 0;
+			outline: 0;
+			width: 80%;
+		}
+		::-webkit-input-placeholder {
+			color: #fff;
+		}
+
+		#search:before {
+			content: '# '
+		}
+	</style>
+	<link rel="icon" href="http://fortawesome.github.io/Font-Awesome/assets/ico/favicon.ico"/>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/uikit/2.10.0/css/uikit.almost-flat.min.css"/>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/uikit/2.10.0/css/addons/uikit.almost-flat.addons.min.css"/>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/pace/0.5.7/themes/blue/pace-theme-corner-indicator.css"/>
+	<link rel="stylesheet" href="FullscreenOverlayStyles/css/style8.css"/>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="fullscreenoverlaystyles/js/demo7.js"></script>
+	<script src="fullscreenoverlaystyles/js/modernizr.custom.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/pace/0.5.7/pace.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/uikit/2.10.0/js/uikit.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/uikit/2.10.0/js/addons/notify.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkaraCLAnj5GwU3BawbFoljZ091IKFla0"></script>
+	<script src="app.js"></script>
+</head>
+<body ondragstart="return false">
+
+<div id="map-canvas">
+</div>
+
+<!-- This is a button toggling the off-canvas sidebar -->
+<button class="uk-button" data-style="expand-right" data-uk-offcanvas="{target:'#tweet-canvas'}" id="expand"><span class="ladda-label"></span><i class="fa fa-long-arrow-left"></i> Expand  <img src="button-logo.png" width="150" alt=""/></button>
+
+<!-- This is the off-canvas sidebar -->
+<div id="tweet-canvas" class="uk-offcanvas">
+	<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+		<div class="tweet">
+			<h1 id="topic"></h1> in <span id="city"></span>
+		</div>
+	</div>
+</div>
+<div class="overlay overlay-contentscale open">
+	<nav>
+		<form action="get">
+			<input type="text" placeholder="Search #iPhoneBend by city..." id="search"/>
+		</form>
+	</nav>
+	<footer>
+
+	</footer>
+</div>
+</body>
+</html>

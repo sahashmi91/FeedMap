@@ -1,0 +1,26 @@
+[
+	{
+		"Latitude": "76",
+		"City": "quetta",
+		"UserHandle": "TestUser2",
+		"Longitude": "42"
+	},
+	{
+		"Latitude": "76",
+		"City": "quetta",
+		"UserHandle": "TestUser1",
+		"Longitude": "42"
+	},
+	{
+		"Latitude": "71",
+		"City": "quetta",
+		"UserHandle": "TestUser1",
+		"Longitude": "42"
+	},
+	{
+		"Latitude": "71",
+		"City": "quetta",
+		"UserHandle": "TestUser2",
+		"Longitude": "42"
+	}
+]
