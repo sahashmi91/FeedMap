@@ -5,6 +5,6 @@
 
 - Front-end & design: Andy Fang
 - Database design & JSON: Ather Hasnain
-- Database design & scraping: Kassim Shroff
+- Database design & scraping: Syed Hashmi
 
 Real time streaming of tweets on interesting topics in Google Maps.
